@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: repeat(6, 100px);
+    grid-template-areas:
+        "w1 w1 w1 b1 b1 y1"
+        "w2 w2 w2 b1 b1 r1"
+        "bl1 bl1 w2 b2 b2 r1";
+    gap: 5px;
+}
+
+.grid-container div {
+    border: 2px solid black;
+}
+
+.w1 { grid-area: w1; background-color: white; }
+.w2 { grid-area: w2; background-color: white; }
+.b1 { grid-area: b1; background-color: black; }
+.b2 { grid-area: b2; background-color: black; }
+.y1 { grid-area: y1; background-color: yellow; }
+.r1 { grid-area: r1; background-color: red; }
+.bl1 { grid-area: bl1; background-color: blue; }
